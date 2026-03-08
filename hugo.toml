@@ -1,11 +1,12 @@
 baseURL = "https://krakaur.github.io/bcs-terrenos/"
 languageCode = "es-mx"
-title = "Terrenos BCS — Propiedades en Baja California Sur"
+title = "Inmobiliaria Molina — Your True Contact with BCS Landowners"
 theme = "realty-theme"
 
 [params]
-  tagline = "Terrenos, Ranchos y Propiedades en Baja California Sur, México"
-  description = "Venta de terrenos y ranchos en La Paz, Los Cabos, Todos Santos y más ubicaciones en Baja California Sur."
+  brand = "Inmobiliaria Molina"
+  tagline = "Your true contact with BCS landowners"
+  description = "Inmobiliaria Molina — Venta de terrenos, ranchos y propiedades en La Paz, Los Cabos, Todos Santos y Baja California Sur. Your true contact with BCS landowners."
   phone = "+52 612 100 0000"
   email = "info@terrenos-bcs.com"
   whatsapp = "+5216121000000"

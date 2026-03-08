@@ -2,7 +2,7 @@
 title: "Nosotros"
 ---
 
-## Sobre Terrenos BCS
+## Sobre Inmobiliaria Molina
 
 Somos un equipo de profesionales inmobiliarios con más de XX años de experiencia en el mercado de bienes raíces de Baja California Sur. Nos especializamos en la venta de terrenos, ranchos y propiedades rústicas en las zonas de mayor potencial de inversión del estado.
 
