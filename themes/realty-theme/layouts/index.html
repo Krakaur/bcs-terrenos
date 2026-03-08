@@ -42,7 +42,7 @@
   <div class="property-grid">
     {{ range first 6 (where .Site.RegularPages "Section" "properties") }}
     <div class="property-card">
-      <div class="property-img" style="background-image: url('{{ .Params.image | default ("img/placeholder.svg" | relURL) }}');">
+      <div class="property-img" style="background-image: url('{{ (.Params.image | default "img/placeholder.svg") | relURL }}');">
         {{ if .Params.featured }}<span class="badge">Featured</span>{{ end }}
         <span class="badge-tipo">{{ .Params.type | default "Land" }}</span>
       </div>

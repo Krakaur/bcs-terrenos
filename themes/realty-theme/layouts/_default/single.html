@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="property-detail">
-  <div class="property-hero" style="background-image: url('{{ .Params.image | default ("img/placeholder.svg" | relURL) }}');">
+  <div class="property-hero" style="background-image: url('{{ (.Params.image | default "img/placeholder.svg") | relURL }}');">
     <div class="property-hero-overlay">
       <h1>{{ .Title }}</h1>
       <p class="hero-location">📍 {{ .Params.location | default "Baja California Sur" }}</p>
