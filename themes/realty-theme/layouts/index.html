@@ -2,12 +2,12 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Inmobiliaria <span class="highlight">Molina</span></h1>
-    <p class="hero-sub">Your true contact with BCS landowners</p>
-    <p class="hero-sub2">Terrenos, ranchos y propiedades en Baja California Sur, México</p>
+    <h1>Realstate <span class="highlight">Golden Baja</span></h1>
+    <p class="hero-sub">Your True Contact with BCS Landowners</p>
+    <p class="hero-sub2">Land, ranches and properties in Baja California Sur, Mexico</p>
     <div class="hero-cta">
-      <a href="{{ "propiedades/" | relURL }}" class="btn btn-primary">Ver Propiedades</a>
-      <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="btn btn-secondary" target="_blank">💬 Contáctanos</a>
+      <a href="{{ "properties/" | relURL }}" class="btn btn-primary">View Properties</a>
+      <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="btn btn-secondary" target="_blank">💬 Contact Us</a>
     </div>
   </div>
 </section>
@@ -16,58 +16,58 @@
 <section class="highlights">
   <div class="highlight-card">
     <span class="h-icon">📍</span>
-    <h3>Ubicación Privilegiada</h3>
-    <p>Propiedades en las zonas de mayor plusvalía de BCS: La Paz, Los Cabos, Todos Santos, El Pescadero.</p>
+    <h3>Prime Locations</h3>
+    <p>Properties in BCS's highest-value areas: La Paz, Los Cabos, Todos Santos, El Pescadero.</p>
   </div>
   <div class="highlight-card">
     <span class="h-icon">📐</span>
-    <h3>Desde 1,000 m² hasta 100+ hectáreas</h3>
-    <p>Terrenos urbanos, rústicos, ranchos productivos y predios con frente de playa.</p>
+    <h3>From 1,000 m² to 100+ Hectares</h3>
+    <p>Urban lots, rural land, working ranches, and beachfront parcels.</p>
   </div>
   <div class="highlight-card">
     <span class="h-icon">🔒</span>
-    <h3>Documentación en Orden</h3>
-    <p>Escrituras, fideicomiso bancario (zona restringida), certificados de libertad de gravamen.</p>
+    <h3>Legal Documentation in Order</h3>
+    <p>Title deeds, bank trust (fideicomiso for restricted zones), lien-free certificates.</p>
   </div>
   <div class="highlight-card">
     <span class="h-icon">🌎</span>
-    <h3>Servicio Bilingüe</h3>
-    <p>Atención en español e inglés. We speak English — international buyers welcome.</p>
+    <h3>International Service</h3>
+    <p>Bilingual support — international buyers welcome. We handle the entire process.</p>
   </div>
 </section>
 
 <!-- Featured Properties -->
 <section class="featured">
-  <h2 class="section-title">Propiedades Destacadas</h2>
+  <h2 class="section-title">Featured Properties</h2>
   <div class="property-grid">
-    {{ range first 6 (where .Site.RegularPages "Section" "propiedades") }}
+    {{ range first 6 (where .Site.RegularPages "Section" "properties") }}
     <div class="property-card">
       <div class="property-img" style="background-image: url('{{ .Params.image | default ("img/placeholder.svg" | relURL) }}');">
-        {{ if .Params.featured }}<span class="badge">Destacado</span>{{ end }}
-        <span class="badge-tipo">{{ .Params.tipo | default "Terreno" }}</span>
+        {{ if .Params.featured }}<span class="badge">Featured</span>{{ end }}
+        <span class="badge-tipo">{{ .Params.type | default "Land" }}</span>
       </div>
       <div class="property-info">
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <p class="property-location">📍 {{ .Params.ubicacion | default "BCS" }}</p>
+        <p class="property-location">📍 {{ .Params.location | default "BCS" }}</p>
         <div class="property-details">
-          <span>📐 {{ .Params.superficie | default "N/D" }}</span>
-          <span class="property-price">{{ .Params.precio | default "Consultar" }}</span>
+          <span>📐 {{ .Params.area | default "N/A" }}</span>
+          <span class="property-price">{{ .Params.price | default "Contact us" }}</span>
         </div>
       </div>
     </div>
     {{ end }}
   </div>
   <div class="cta-center">
-    <a href="{{ "propiedades/" | relURL }}" class="btn btn-primary">Ver todas las propiedades →</a>
+    <a href="{{ "properties/" | relURL }}" class="btn btn-primary">View all properties →</a>
   </div>
 </section>
 
 <!-- About Snippet -->
 <section class="about-snippet">
   <div class="about-text">
-    <h2>¿Por qué Baja California Sur?</h2>
-    <p>BCS es uno de los destinos con mayor crecimiento en inversión inmobiliaria en México. Con más de 300 días de sol al año, paisajes únicos entre desierto y mar, y una creciente infraestructura turística, es el lugar ideal para invertir, construir o vivir.</p>
-    <p>Ya sea que busques un rancho productivo en la sierra, un terreno con vista al mar para desarrollo turístico, o un lote urbano en La Paz — tenemos opciones para cada perfil de inversión.</p>
+    <h2>Why Baja California Sur?</h2>
+    <p>BCS is one of Mexico's fastest-growing real estate investment destinations. With over 300 days of sunshine per year, stunning desert-meets-ocean landscapes, and expanding tourism infrastructure, it's the ideal place to invest, build, or live.</p>
+    <p>Whether you're looking for a working ranch in the mountains, oceanfront land for tourism development, or an urban lot in La Paz — we have options for every investment profile.</p>
   </div>
 </section>
 {{ end }}

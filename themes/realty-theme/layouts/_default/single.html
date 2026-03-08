@@ -3,7 +3,7 @@
   <div class="property-hero" style="background-image: url('{{ .Params.image | default ("img/placeholder.svg" | relURL) }}');">
     <div class="property-hero-overlay">
       <h1>{{ .Title }}</h1>
-      <p class="hero-location">📍 {{ .Params.ubicacion | default "Baja California Sur" }}</p>
+      <p class="hero-location">📍 {{ .Params.location | default "Baja California Sur" }}</p>
     </div>
   </div>
 
@@ -11,56 +11,56 @@
     <div class="detail-main">
       <div class="detail-specs">
         <div class="spec">
-          <span class="spec-label">Superficie</span>
-          <span class="spec-value">{{ .Params.superficie | default "Consultar" }}</span>
+          <span class="spec-label">Area</span>
+          <span class="spec-value">{{ .Params.area | default "Contact us" }}</span>
         </div>
         <div class="spec">
-          <span class="spec-label">Tipo</span>
-          <span class="spec-value">{{ .Params.tipo | default "Terreno" }}</span>
+          <span class="spec-label">Type</span>
+          <span class="spec-value">{{ .Params.type | default "Land" }}</span>
         </div>
         <div class="spec">
-          <span class="spec-label">Precio</span>
-          <span class="spec-value price">{{ .Params.precio | default "Consultar" }}</span>
+          <span class="spec-label">Price</span>
+          <span class="spec-value price">{{ .Params.price | default "Contact us" }}</span>
         </div>
-        {{ if .Params.precio_m2 }}
+        {{ if .Params.price_sqm }}
         <div class="spec">
-          <span class="spec-label">Precio/m²</span>
-          <span class="spec-value">{{ .Params.precio_m2 }}</span>
+          <span class="spec-label">Price/m²</span>
+          <span class="spec-value">{{ .Params.price_sqm }}</span>
         </div>
         {{ end }}
       </div>
 
       <div class="detail-description">
-        <h2>Descripción</h2>
+        <h2>Description</h2>
         {{ .Content }}
       </div>
 
-      {{ if .Params.caracteristicas }}
+      {{ if .Params.features }}
       <div class="detail-features">
-        <h2>Características</h2>
+        <h2>Features</h2>
         <ul class="features-list">
-          {{ range .Params.caracteristicas }}
+          {{ range .Params.features }}
           <li>✓ {{ . }}</li>
           {{ end }}
         </ul>
       </div>
       {{ end }}
 
-      {{ if .Params.coordenadas }}
+      {{ if .Params.coordinates }}
       <div class="detail-map">
-        <h2>Ubicación</h2>
-        <p>📍 Coordenadas: {{ .Params.coordenadas }}</p>
-        <a href="https://maps.google.com/?q={{ .Params.coordenadas }}" target="_blank" class="btn btn-secondary">Ver en Google Maps</a>
+        <h2>Location</h2>
+        <p>📍 Coordinates: {{ .Params.coordinates }}</p>
+        <a href="https://maps.google.com/?q={{ .Params.coordinates }}" target="_blank" class="btn btn-secondary">View on Google Maps</a>
       </div>
       {{ end }}
     </div>
 
     <div class="detail-sidebar">
       <div class="contact-card">
-        <h3>¿Interesado?</h3>
-        <p>Contáctanos para más información, agendar una visita o negociar.</p>
-        <a href="https://wa.me/{{ .Site.Params.whatsapp }}?text=Hola,%20me%20interesa%20la%20propiedad:%20{{ .Title }}" class="btn btn-primary btn-block" target="_blank">💬 WhatsApp</a>
-        <a href="mailto:{{ .Site.Params.email }}?subject=Consulta:%20{{ .Title }}" class="btn btn-secondary btn-block">📧 Email</a>
+        <h3>Interested?</h3>
+        <p>Contact us for more information, schedule a visit, or negotiate.</p>
+        <a href="https://wa.me/{{ .Site.Params.whatsapp }}?text=Hello,%20I'm%20interested%20in:%20{{ .Title }}" class="btn btn-primary btn-block" target="_blank">💬 WhatsApp</a>
+        <a href="mailto:{{ .Site.Params.email }}?subject=Inquiry:%20{{ .Title }}" class="btn btn-secondary btn-block">📧 Email</a>
         <p class="contact-phone">📞 {{ .Site.Params.phone }}</p>
       </div>
     </div>
