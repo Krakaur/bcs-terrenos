@@ -30,6 +30,12 @@
         {{ end }}
       </div>
 
+      {{ if .Params.image }}
+      <div class="property-photo">
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+      </div>
+      {{ end }}
+
       <div class="detail-description">
         <h2>Description</h2>
         {{ .Content }}
