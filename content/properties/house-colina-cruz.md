@@ -3,8 +3,8 @@ title: "House — Colina de la Cruz"
 type: "House"
 location: "Colina de la Cruz, La Paz, BCS"
 area: "380 m² lot / 100 m² construction"
-price: "USD $275,000"
-price_sqm: "USD $2,750/m² (construction)"
+price: "USD $300,000"
+price_sqm: "USD $3,000/m² (construction)"
 coordinates: "24.1426, -110.3128"
 featured: true
 image: "/img/colina-cruz-house.jpg"
@@ -33,4 +33,4 @@ The property features a **partial bay view** with excellent potential to improve
 
 The house is delivered **painted and clean**, ready for immediate occupancy or improvement.
 
-*Images and exact coordinates will be updated soon.*
+*Note: Price shown in USD at exchange rate of 16 MXN/USD (approx. $4,800,000 MXN).*
