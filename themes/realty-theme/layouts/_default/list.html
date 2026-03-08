@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{ if .Content }}<div class="page-desc">{{ .Content }}</div>{{ end }}
+</section>
+
+<section class="property-listing">
+  <div class="property-grid">
+    {{ range .Pages }}
+    <div class="property-card">
+      <div class="property-img" style="background-image: url('{{ .Params.image | default ("img/placeholder.svg" | relURL) }}');">
+        <span class="badge-tipo">{{ .Params.tipo | default "Terreno" }}</span>
+      </div>
+      <div class="property-info">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="property-location">📍 {{ .Params.ubicacion | default "BCS" }}</p>
+        <div class="property-details">
+          <span>📐 {{ .Params.superficie | default "N/D" }}</span>
+          <span class="property-price">{{ .Params.precio | default "Consultar" }}</span>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

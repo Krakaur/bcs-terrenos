@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Terrenos BCS</h4>
+      <p>{{ .Site.Params.tagline }}</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <p>📞 {{ .Site.Params.phone }}</p>
+      <p>📧 {{ .Site.Params.email }}</p>
+      <p>💬 <a href="https://wa.me/{{ .Site.Params.whatsapp }}">WhatsApp</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Ubicaciones</h4>
+      <p>La Paz · Los Cabos · Todos Santos<br>El Pescadero · Sierra de la Laguna<br>Baja California Sur, México</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} Terrenos BCS. Todos los derechos reservados.</p>
+  </div>
+</footer>

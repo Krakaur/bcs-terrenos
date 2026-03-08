@@ -1,0 +1,72 @@
+{{ define "main" }}
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Tu terreno en <span class="highlight">Baja California Sur</span></h1>
+    <p class="hero-sub">Ranchos, terrenos y propiedades con vistas al Mar de Cortés, al Pacífico y a la Sierra de la Laguna</p>
+    <div class="hero-cta">
+      <a href="{{ "propiedades/" | relURL }}" class="btn btn-primary">Ver Propiedades</a>
+      <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="btn btn-secondary" target="_blank">💬 Contáctanos</a>
+    </div>
+  </div>
+</section>
+
+<!-- Highlights -->
+<section class="highlights">
+  <div class="highlight-card">
+    <span class="h-icon">📍</span>
+    <h3>Ubicación Privilegiada</h3>
+    <p>Propiedades en las zonas de mayor plusvalía de BCS: La Paz, Los Cabos, Todos Santos, El Pescadero.</p>
+  </div>
+  <div class="highlight-card">
+    <span class="h-icon">📐</span>
+    <h3>Desde 1,000 m² hasta 100+ hectáreas</h3>
+    <p>Terrenos urbanos, rústicos, ranchos productivos y predios con frente de playa.</p>
+  </div>
+  <div class="highlight-card">
+    <span class="h-icon">🔒</span>
+    <h3>Documentación en Orden</h3>
+    <p>Escrituras, fideicomiso bancario (zona restringida), certificados de libertad de gravamen.</p>
+  </div>
+  <div class="highlight-card">
+    <span class="h-icon">🌎</span>
+    <h3>Servicio Bilingüe</h3>
+    <p>Atención en español e inglés. We speak English — international buyers welcome.</p>
+  </div>
+</section>
+
+<!-- Featured Properties -->
+<section class="featured">
+  <h2 class="section-title">Propiedades Destacadas</h2>
+  <div class="property-grid">
+    {{ range first 6 (where .Site.RegularPages "Section" "propiedades") }}
+    <div class="property-card">
+      <div class="property-img" style="background-image: url('{{ .Params.image | default ("img/placeholder.svg" | relURL) }}');">
+        {{ if .Params.featured }}<span class="badge">Destacado</span>{{ end }}
+        <span class="badge-tipo">{{ .Params.tipo | default "Terreno" }}</span>
+      </div>
+      <div class="property-info">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="property-location">📍 {{ .Params.ubicacion | default "BCS" }}</p>
+        <div class="property-details">
+          <span>📐 {{ .Params.superficie | default "N/D" }}</span>
+          <span class="property-price">{{ .Params.precio | default "Consultar" }}</span>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  <div class="cta-center">
+    <a href="{{ "propiedades/" | relURL }}" class="btn btn-primary">Ver todas las propiedades →</a>
+  </div>
+</section>
+
+<!-- About Snippet -->
+<section class="about-snippet">
+  <div class="about-text">
+    <h2>¿Por qué Baja California Sur?</h2>
+    <p>BCS es uno de los destinos con mayor crecimiento en inversión inmobiliaria en México. Con más de 300 días de sol al año, paisajes únicos entre desierto y mar, y una creciente infraestructura turística, es el lugar ideal para invertir, construir o vivir.</p>
+    <p>Ya sea que busques un rancho productivo en la sierra, un terreno con vista al mar para desarrollo turístico, o un lote urbano en La Paz — tenemos opciones para cada perfil de inversión.</p>
+  </div>
+</section>
+{{ end }}

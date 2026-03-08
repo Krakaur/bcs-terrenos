@@ -1,0 +1,40 @@
+baseURL = "https://krakaur.github.io/bcs-terrenos/"
+languageCode = "es-mx"
+title = "Terrenos BCS — Propiedades en Baja California Sur"
+theme = "realty-theme"
+
+[params]
+  tagline = "Terrenos, Ranchos y Propiedades en Baja California Sur, México"
+  description = "Venta de terrenos y ranchos en La Paz, Los Cabos, Todos Santos y más ubicaciones en Baja California Sur."
+  phone = "+52 612 100 0000"
+  email = "info@terrenos-bcs.com"
+  whatsapp = "+5216121000000"
+  currency = "USD"
+  region = "Baja California Sur, México"
+
+[menu]
+  [[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Propiedades"
+    url = "/propiedades/"
+    weight = 2
+  [[menu.main]]
+    name = "Nosotros"
+    url = "/nosotros/"
+    weight = 3
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contacto/"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tipo = "tipos"
+  ubicacion = "ubicaciones"

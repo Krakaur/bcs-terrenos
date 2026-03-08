@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ "" | relURL }}" class="site-logo">
+      <span class="logo-icon">🏜️</span>
+      <span class="logo-text">TERRENOS <strong>BCS</strong></span>
+    </a>
+    <nav class="main-nav">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="cta-btn" target="_blank">💬 WhatsApp</a>
+    <button class="menu-toggle" aria-label="Menú">☰</button>
+  </div>
+</header>
