@@ -7,7 +7,12 @@ price: "USD $300,000"
 price_sqm: "USD $3,000/m² (construction)"
 coordinates: "24.1426, -110.3128"
 featured: true
-image: "img/colina-cruz-house.jpg"
+image: "img/colina-cruz-1-facade.jpg"
+images:
+  - "img/colina-cruz-1-facade.jpg"
+  - "img/colina-cruz-2-patio.jpg"
+  - "img/colina-cruz-3-entry.jpg"
+  - "img/colina-cruz-4-interior.jpg"
 features:
   - "4 bedrooms"
   - "2 bathrooms"
